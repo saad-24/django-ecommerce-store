@@ -1,0 +1,151 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>Django Tailwind</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		{% tailwind_css %}
+	</head>
+
+	<body class="bg-gray-50 font-sans leading-normal tracking-normal">
+        <header class="p-4 dark:bg-gray-800 dark:text-gray-100">
+            <div class="container flex justify-between h-16 mx-auto">
+                <ul class="items-stretch hidden space-x-3 lg:flex">
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent dark:text-violet-400 dark:border-violet-400">Home</a>
+                    </li>
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Men</a>
+                    </li>
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Women</a>
+                    </li>
+                </ul>
+                <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="flex items-center p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" class="w-8 h-8 dark:text-violet-400">
+                        <img src="/static/logo.png" class="w-10">
+                    </svg>
+                </a>
+                <div class="flex items-center md:space-x-4">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                            <button type="submit" title="Search" class="p-1 focus:outline-none focus:ring">
+                                <svg fill="currentColor" viewBox="0 0 512 512" class="w-4 h-4 dark:text-gray-100">
+                                    <path d="M479.6,399.716l-81.084-81.084-62.368-25.767A175.014,175.014,0,0,0,368,192c0-97.047-78.953-176-176-176S16,94.953,16,192,94.953,368,192,368a175.034,175.034,0,0,0,101.619-32.377l25.7,62.2L400.4,478.911a56,56,0,1,0,79.2-79.195ZM48,192c0-79.4,64.6-144,144-144s144,64.6,144,144S271.4,336,192,336,48,271.4,48,192ZM456.971,456.284a24.028,24.028,0,0,1-33.942,0l-76.572-76.572-23.894-57.835L380.4,345.771l76.573,76.572A24.028,24.028,0,0,1,456.971,456.284Z"></path>
+                                </svg>
+                            </button>
+                        </span>
+                        <input type="search" name="Search" placeholder="Search..." class="w-32 py-2 pl-10 text-sm rounded-md sm:w-auto focus:outline-none dark:bg-gray-800 dark:text-gray-100 focus:dark:bg-gray-900">
+                    </div>
+                    <button type="button" class="hidden px-6 py-2 font-semibold rounded lg:block dark:bg-violet-400 dark:text-gray-900">Log in</button>
+                </div>
+                <button title="Open menu" type="button" class="p-4 lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 dark:text-gray-100">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+        <div class="px-8 py-2 bg-black flex items-center justify-center text-sm text-center" >
+                <div class="text-white">
+                    <span>Get up to 50% off your first order + free shipping,</span>
+                    <a href="#" rel="noopener noreferrer" class="underline">sign up</a> today!
+                </div>
+        </div>
+        <div>
+                <img src="/static/banner.png" class="relative w-30">
+        </div>
+
+        <div class="max-w-screen-xl p-5 mx-auto dark:bg-gray-800 dark:text-gray-100">
+            <div class="grid grid-cols-1 gap-2 lg:grid-cols-2 md:grid-cols-2">
+                <div class="relative flex items-end justify-start w-full text-left bg-center bg-cover h-96 dark:bg-gray-500" style="background-image: url(/static/shop\ women.png);">
+                    <h2 class="z-10 p-5 left-10">
+                        <a rel="noopener noreferrer" href="#" class="text-3xl font-bold text-white text-right"> SHOP WOMEN</a>
+                    </h2>
+                </div>
+                <div class="relative flex items-end justify-start w-full text-left bg-center bg-cover h-96 dark:bg-gray-500" style="background-image: url(/static/shop\ men.png);">
+                    <h2 class="z-10 p-5">
+                        <a rel="noopener noreferrer" href="#" class="font-bold text-3xl text-white">SHOP MEN</a>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 py-12 bg-black text-white">
+            <div class="container mx-auto">
+                <div class="flex flex-col lg:flex-row items-center justify-between">
+                    <h2 class="text-center text-6xl tracking-tighter font-bold">Up to
+                        <br class="sm:hidden">50% Off
+                    </h2>
+                    <div class="space-x-2 text-center py-2 lg:py-0">
+                        <span>Plus free shipping! Use code:</span>
+                        <span class="font-bold text-lg">SHARK</span>
+                    </div>  
+            </div>
+        </div>
+        </div>
+        <div class="w-full dark:bg-gray-500 mt-10" style="background-color: black; color: white;">
+            <div class="container flex flex-col flex-wrap content-center justify-center p-4 py-20 mx-auto md:p-10">
+                <h1 class="text-5xl antialiased font-semibold leading-none text-center dark:text-gray-100">Get Our Updates</h1>
+                <p class="pt-2 pb-8 text-xl antialiased text-center dark:text-gray-100">Find out about events and other news</p>
+                <div class="flex flex-row">
+                    <input type="text" placeholder="example@email.com" class="w-3/5 p-3 rounded-l-lg sm:w-2/3">
+                    <button type="button" class="w-2/5 p-3 font-semibold rounded-r-lg sm:w-1/3 dark:bg-violet-400 dark:text-gray-900">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <footer class="p-6 dark:bg-gray-800 dark:text-gray-100 mt-10 ">
+            <div class="container grid grid-cols-2 mx-auto gap-x-3 gap-y-8 sm:grid-cols-3 md:grid-cols-4 ">
+                <div class="flex flex-col space-y-4">
+                    <h2 class="font-medium">Getting started</h2>
+                    <div class="flex flex-col space-y-2 text-sm dark:text-gray-400">
+                        <a rel="noopener noreferrer" href="#">Installation</a>
+                        <a rel="noopener noreferrer" href="#">Release Notes</a>
+                        <a rel="noopener noreferrer" href="#">Upgrade Guide</a>
+                        <a rel="noopener noreferrer" href="#">Using with Preprocessors</a>
+                        <a rel="noopener noreferrer" href="#">Optimizing for Production</a>
+                        <a rel="noopener noreferrer" href="#">Browser Support</a>
+                        <a rel="noopener noreferrer" href="#">IntelliSense</a>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-4">
+                    <h2 class="font-medium">Core Concepts</h2>
+                    <div class="flex flex-col space-y-2 text-sm dark:text-gray-400">
+                        <a rel="noopener noreferrer" href="#">Utility-First</a>
+                        <a rel="noopener noreferrer" href="#">Responsive Design</a>
+                        <a rel="noopener noreferrer" href="#">Hover, Focus, &amp; Other States</a>
+                        <a rel="noopener noreferrer" href="#">Dark Mode</a>
+                        <a rel="noopener noreferrer" href="#">Adding Base Styles</a>
+                        <a rel="noopener noreferrer" href="#">Extracting Components</a>
+                        <a rel="noopener noreferrer" href="#">Adding New Utilities</a>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-4">
+                    <h2 class="font-medium">Customization</h2>
+                    <div class="flex flex-col space-y-2 text-sm dark:text-gray-400">
+                        <a rel="noopener noreferrer" href="#">Configuration</a>
+                        <a rel="noopener noreferrer" href="#">Theme Configuration</a>
+                        <a rel="noopener noreferrer" href="#">Breakpoints</a>
+                        <a rel="noopener noreferrer" href="#">Customizing Colors</a>
+                        <a rel="noopener noreferrer" href="#">Customizing Spacing</a>
+                        <a rel="noopener noreferrer" href="#">Configuring Variants</a>
+                        <a rel="noopener noreferrer" href="#">Plugins</a>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-4">
+                    <h2 class="font-medium">Community</h2>
+                    <div class="flex flex-col space-y-2 text-sm dark:text-gray-400">
+                        <a rel="noopener noreferrer" href="#">GitHub</a>
+                        <a rel="noopener noreferrer" href="#">Discord</a>
+                        <a rel="noopener noreferrer" href="#">Twitter</a>
+                        <a rel="noopener noreferrer" href="#">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-center px-6 pt-12 text-sm">
+                <span class="dark:text-gray-400">© Copyright 1986. All Rights Reserved.</span>
+            </div>
+        </footer>
+	</body>
+</html>
